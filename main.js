@@ -28,6 +28,7 @@ define(function (require, exports, module) {
 	"use strict";
 	
 	var AppInit             = brackets.getModule("utils/AppInit"),
+		Menus = brackets.getModule("command/Menus"),
 		DocumentManager     = brackets.getModule("document/DocumentManager"),
 		FileSystem          = brackets.getModule("filesystem/FileSystem"),
 		FileUtils           = brackets.getModule("file/FileUtils"),
@@ -75,8 +76,9 @@ define(function (require, exports, module) {
 		}
 	}
 	
-	AppInit.appReady(function () {
-		CommandManager.register('New Quick Test', 'quicktest.file', newEdit);
-		KeyBindingManager.addBinding('quicktest.file', 'Ctrl-Alt-M');
-	});
+	CommandManager.register('Test Snipet', 'quicktest.file', newEdit);
+	KeyBindingManager.addBinding('quicktest.file', 'Ctrl-Alt-M');
+	
+	Menus.getContextMenu(Menus.ContextMenuIds.EDITOR_MENU).addMenuDivider();
+	Menus.getContextMenu(Menus.ContextMenuIds.EDITOR_MENU).addMenuItem('quicktest.file');
 });
