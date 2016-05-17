@@ -1,0 +1,14 @@
+{
+	"name": "quick-test",
+	"title": "Quick test code snipets.",
+	"description": "Uses Brackets builder to let you quickly test snipets of code.",
+	"homepage": "https://github.com/Fraser-Greenlee/quick-test/tree/master",
+	"version": "0.0.1",
+	"author": "Fraser-Greenlee",
+	"license": "MIT",
+	"files": [
+		"main.js"
+	],
+	"contributors": ["Fraser-Greenlee"],
+	"keywords": ["test","quick","builder","brackets"]
+}
